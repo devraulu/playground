@@ -1,0 +1,34 @@
+body {
+    background-color: oklch(0% 0 0);
+}
+
+.hello {
+    writing-mode: vertical-rl;
+    text-wrap: nowrap;
+    font-size: 18rem;
+    font-weight: 900;
+    color: oklch(80% 0 0);
+    /* -webkit-text-stroke: 4px crimson; */
+    position: relative;
+    /* text-shadow: 0 0 4px oklch(from crimson l c h / 0.8); */
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        top: 10px;
+        z-index: -1;
+        margin-left: 20%;
+        content: 'Well, hello there!';
+        color: transparent;
+        /* -webkit-text-stroke: 4px crimson; */
+    }
+}
+
+.hello-shadow {
+    writing-mode: vertical-rl;
+    text-wrap: nowrap;
+    font-size: 18rem;
+    color: transparent;
+    -webkit-text-stroke: 4px black;
+    /* text-shadow: 0 0 4px crimson; */
+}

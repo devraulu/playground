@@ -18,12 +18,19 @@
       "ESNext"
     ],
     "types": [
+      "./declarations.d.ts",
       "vite/client",
       "vike-react",
       "vike-cloudflare/types"
     ],
     "jsx": "preserve",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "#root/*": [
+        "./*"
+      ]
+    }
   },
   "exclude": [
     "dist"

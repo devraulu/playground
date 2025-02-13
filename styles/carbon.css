@@ -1,0 +1,12 @@
+:root {
+    --1x: 8px;
+    --2x: calc(var(--1x) * 2);
+    --3x: calc(var(--1x) * 3);
+    --4x: calc(var(--1x) * 4);
+    --5x: calc(var(--1x) * 5);
+    --6x: calc(var(--1x) * 6);
+    --7x: calc(var(--1x) * 7);
+    --8x: calc(var(--1x) * 8);
+    --9x: calc(var(--1x) * 9);
+    --10x: calc(var(--1x) * 10);
+}

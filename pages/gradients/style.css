@@ -1,0 +1,114 @@
+@import '#root/styles/carbon.css';
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        [full-width-start] var(--2x)
+        [content]minmax(10rem, 1fr)
+        [full-width-end] var(--2x);
+    grid-auto-rows: minmax(10rem, auto);
+
+    @media (min-width: 64rem) {
+        /* margin: 0 auto; */
+        margin: 0;
+        margin-top: var(--2x);
+
+        grid-template-columns:
+            [full-width-start] var(--2x)
+            [content-start]
+            repeat(6, minmax(10rem, 1fr))
+            [content-end]
+            var(--2x) [full-width-end];
+        column-gap: var(--2x);
+    }
+}
+
+.balls {
+    grid-column: content;
+
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-auto-rows: minmax(10rem, auto);
+
+    & > div {
+        margin: var(--2x);
+    }
+
+    [class*='ball'] {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+    }
+}
+
+.ball {
+    background: linear-gradient(
+            217deg,
+            rgba(255, 0, 0, 0.8),
+            rgba(255, 0, 0, 0) 70.71%
+        ),
+        linear-gradient(
+            127deg,
+            rgba(0, 255, 0, 0.8),
+            rgba(0, 255, 0, 0) 70.71%
+        ),
+        linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+.ball-2 {
+    background: linear-gradient(0.2turn in oklch, blue, red);
+}
+
+.ball-3 {
+    background: linear-gradient(0.25turn in oklch longer hue, blue, red);
+}
+
+.ball-4 {
+    background: linear-gradient(
+        in oklch,
+        oklch(62.94% 0.2898 25.41),
+        oklch(62.94% 0.259 360) 10%,
+        oklch(62.94% 0.1998 245.65)
+    );
+}
+
+.ball-5 {
+    background: radial-gradient(
+        at 80% 25% in oklch,
+        oklch(0.901 0.058 230.902),
+        oklch(0.707 0.165 254.624),
+        oklch(0.359 0.144 278.697) 90%
+    );
+}
+
+.ball-6 {
+    background: linear-gradient(
+            217deg in oklch,
+            rgba(255, 0, 0, 0.8),
+            rgba(255, 0, 0, 0) 150.71%
+        ),
+        linear-gradient(
+            127deg in oklch,
+            rgba(0, 255, 0, 0.8),
+            rgba(0, 255, 0, 0) 70.71%
+        ),
+        linear-gradient(
+            336deg in oklch,
+            rgba(0, 0, 255, 0.8),
+            rgba(0, 0, 255, 0) 170%
+        );
+}
+
+.block-1 {
+    --color-1: oklch(90% 0.144 278.697);
+    background: linear-gradient(
+        90deg in oklch,
+        oklch(from var(--color-1) l c h) 0% 20%,
+        oklch(from var(--color-1) calc(l * 0.8) c h) 20% 40%,
+        oklch(from var(--color-1) calc(l * 0.6) c h) 40% 60%,
+        oklch(from var(--color-1) calc(l * 0.4) c h) 60% 80%,
+        oklch(from var(--color-1) calc(l * 0.2) c h) 60% 80%
+    );
+}

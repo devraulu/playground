@@ -1,0 +1,21 @@
+@import "#root/styles/carbon.css";
+
+body {
+  background-color: oklch(10% 0.1 199);
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: var(--4x); */
+}
+
+.text {
+  /* word-break: break-all; */
+  text-align: right;
+  grid-column: 2 / span 1;
+  font-size: var(--text-9xl);
+  font-weight: 700;
+  line-height: 1;
+}

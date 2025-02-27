@@ -1,3 +1,4 @@
+@import "tailwindcss";
 
 /* Reset */
 body {
@@ -31,5 +32,3 @@ body {
 body.page-is-transitioning #page-content {
   opacity: 0;
 }
-
-

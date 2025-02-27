@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+body {
+  background: #fff;
+}
+
+@theme {
+  --color-*: initial;
+  --color-bg: #000;
+  --color-bg2: #111;
+  --color-text: #1d1d1f;
+  --color-fg: #fff;
+
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1.0625rem; /* 17px */
+  --text-lg: 1.1875rem; /* 19px */
+  --text-xl: 1.3125rem; /* 21px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.75rem; /* 28px */
+  --text-4xl: 2.5rem; /* 40px */
+  --text-5xl: 4.5rem; /* 72px */
+}
+
+@layer utilities {
+  :root {
+    --header-row-height: 44px;
+    --header-height: calc(var(--header-row-height) * 2);
+    --hero-height: calc(100svh - var(--header-height));
+  }
+}
